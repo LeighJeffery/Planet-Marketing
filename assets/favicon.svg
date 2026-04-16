@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <!-- Clip to bottom half for the back arc of the orbit ring -->
+    <clipPath id="back"><rect x="0" y="15" width="32" height="17"/></clipPath>
+    <!-- Clip to top half for the front arc of the orbit ring -->
+    <clipPath id="front"><rect x="0" y="0" width="32" height="15"/></clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="#061E30"/>
+
+  <!-- Back half of orbit ring (drawn behind planet) -->
+  <ellipse cx="16" cy="16" rx="13" ry="4.5"
+    fill="none" stroke="#D4A853" stroke-width="1.5"
+    transform="rotate(-25 16 16)"
+    clip-path="url(#back)"/>
+
+  <!-- Planet -->
+  <circle cx="16" cy="16" r="7.5" fill="#0D7EA8"/>
+  <!-- Subtle highlight -->
+  <circle cx="13.5" cy="13.5" r="2.5" fill="#3BC4E2" opacity="0.4"/>
+
+  <!-- Front half of orbit ring (drawn over planet) -->
+  <ellipse cx="16" cy="16" rx="13" ry="4.5"
+    fill="none" stroke="#D4A853" stroke-width="1.5"
+    transform="rotate(-25 16 16)"
+    clip-path="url(#front)"/>
+</svg>

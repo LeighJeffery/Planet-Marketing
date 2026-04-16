@@ -1,0 +1,13 @@
+{
+  "name": "Planet Marketing Growth",
+  "short_name": "PlanetMG",
+  "description": "Results-driven digital marketing for ambitious brands.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#061E30",
+  "theme_color": "#061E30",
+  "icons": [
+    { "src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

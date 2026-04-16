@@ -114,12 +114,11 @@ nav {
   background: rgba(255,255,255,0.04);
   border-top: 1px solid rgba(59,196,226,0.1);
   border-bottom: 1px solid rgba(59,196,226,0.1);
-  padding: 2rem var(--page-pad);
+  padding: 1.75rem var(--page-pad);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 2.5rem;
-  flex-wrap: wrap;
+  gap: 1.25rem;
 }
 .clients-ribbon__label {
   font-size: 0.65rem;
@@ -127,20 +126,13 @@ nav {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--muted);
-  white-space: nowrap;
-  flex-shrink: 0;
 }
-.clients-ribbon__divider {
-  width: 1px;
-  height: 1.25rem;
-  background: rgba(255,255,255,0.12);
-  flex-shrink: 0;
-}
+.clients-ribbon__divider { display: none; }
 .clients-ribbon__logos {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex: 1;
+  width: 100%;
   gap: 1.5rem;
 }
 .clients-ribbon__logos img {

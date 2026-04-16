@@ -12,7 +12,7 @@
   --muted: rgba(255,255,255,0.55);
   --serif: 'Playfair Display', Georgia, serif;
   --sans: 'DM Sans', sans-serif;
-  --page-pad: max(3rem, calc((100vw - 1920px) / 2));
+  --page-pad: max(3rem, calc((100vw - 1400px) / 2));
 }
 
 html { scroll-behavior: smooth; }
@@ -93,7 +93,7 @@ nav {
 }
 .btn-ghost:hover { border-color: var(--white); }
 .hero-stats {
-  position: absolute; right: var(--page-pad); top: 50%; transform: translateY(-50%);
+  position: absolute; right: calc(var(--page-pad) + 6rem); top: 50%; transform: translateY(-50%);
   display: flex; flex-direction: column; gap: 1.5rem; z-index: 1;
 }
 .stat-card {
@@ -108,6 +108,69 @@ nav {
   font-size: 0.75rem; color: var(--muted); letter-spacing: 0.08em;
 }
 .loc-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+/* — CLIENTS RIBBON — */
+.clients-ribbon {
+  background: rgba(255,255,255,0.04);
+  border-top: 1px solid rgba(59,196,226,0.1);
+  border-bottom: 1px solid rgba(59,196,226,0.1);
+  padding: 2rem var(--page-pad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+.clients-ribbon__label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.clients-ribbon__divider {
+  width: 1px;
+  height: 1.25rem;
+  background: rgba(255,255,255,0.12);
+  flex-shrink: 0;
+}
+.clients-ribbon__logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  gap: 1.5rem;
+}
+.clients-ribbon__logos img {
+  flex: 1;
+  height: 54px;
+  width: 0;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.55;
+  transition: opacity 0.2s;
+}
+.clients-ribbon__logos img:hover { opacity: 0.9; }
+.clients-ribbon__logos img[alt="Bloomberg"] { height: 45px; }
+.clients-ribbon__name {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.35);
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.2s;
+  user-select: none;
+}
+.clients-ribbon__name:hover { color: rgba(255,255,255,0.65); }
+
+@media (max-width: 900px) {
+  .clients-ribbon { gap: 1.5rem; padding: 1.25rem 1.5rem; }
+  .clients-ribbon__logos { gap: 1.5rem; }
+}
 
 /* — SHARED — */
 section { padding: 5rem var(--page-pad); }
